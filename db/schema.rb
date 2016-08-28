@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821075927) do
+ActiveRecord::Schema.define(version: 20160828060021) do
+
+  create_table "user_profs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "univ"
+    t.integer  "age"
+    t.integer  "gender"
+    t.text     "bio"
+    t.date     "birth"
+    t.string   "image"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
