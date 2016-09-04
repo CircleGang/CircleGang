@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160828060021) do
 
   create_table "user_profs", force: :cascade do |t|
@@ -23,6 +24,18 @@ ActiveRecord::Schema.define(version: 20160828060021) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+ActiveRecord::Schema.define(version: 20160828060131) do
+
+  create_table "circles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "place"
+    t.text     "content"
+    t.integer  "admin_user_id"
+    t.boolean  "bio"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+>>>>>>> d8320df13a13852aeade977fc422130a9b23f8e3
   end
 
   create_table "users", force: :cascade do |t|
