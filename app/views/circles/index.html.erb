@@ -1,0 +1,8 @@
+<!-- <h1>Circles#index</h1>
+<p>Find me in app/views/circles/index.html.erb</p>
+ -->
+ <h1>サークル情報</h1>
+ <% @circles.each do |circle| %>
+ 	<p>タイトル</p>
+ 	<span><%=link_to circle.title, "/circles/#{circle.id}" %></span>
+ <% end %>

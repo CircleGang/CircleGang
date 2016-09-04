@@ -1,0 +1,6 @@
+<h1>ページを編集する</h1>
+<%= form_tag update_circle_path(@circle.id), method: 'patch' do %>
+  <%= text_field_tag :title, @circle.title %>
+  <%= text_area_tag :body, @circle.body %>
+  <%= submit_tag '保存' %>
+<% end %>
