@@ -5,6 +5,10 @@ class UsersProfController < ApplicationController
     	@user_prof = User_prof.new
     end
 
+    def show
+    	
+    end
+
 	def create
 		@user_prof = User_prof.new(user_prof_params)
 		user_id = current.user_id
