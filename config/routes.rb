@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   get '/circles/:id/edit' => 'circles#edit', as: 'edit_circle'
   patch '/circles/:id' => 'circles#update', as: 'update_circle'
 
-  circle '/circles' => 'circles#create'
+   # '/circles' => 'circles#create'
+
+
+  root 'users_prof#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
  
