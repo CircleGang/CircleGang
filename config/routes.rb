@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # resources :users_prof
   
   get 'circles/new'=>'circles#new'
+  get 'circles/show'=>'circles#show'
   get '/circles' => 'circles#index'
   get '/circle/:id' => 'circles#show',as: 'circle'
   get '/circles/:id/edit' => 'circles#edit', as: 'edit_circle'
