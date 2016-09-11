@@ -1,5 +1,8 @@
 class CirclesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   def new
+    if user = User.authenticate(params[:username], params[:password])
+      session[:user_id] = user.id
   end
   def index
   	@circles = Circle.all
@@ -24,7 +27,13 @@ class CirclesController < ApplicationController
     @circle.save
     redirect_to circle_path(@circle.id)
   end
-  end
+  
   # def destroy
   # end
+
+   private
+    def current_user
+      @_current_user ||= User.find_by(id: session[:user_id])
+    end
+
 end
