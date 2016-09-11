@@ -18,7 +18,7 @@ class CirclesController < ApplicationController
   	@circle = Circle.find(params[:id])
   end
   def update
-  	@circle = Post.find(params[:id])
+  	@circle = Circle.find(params[:id])
     @circle.title = params[:title]
     @circle.body = params[:body]
     @circle.save
