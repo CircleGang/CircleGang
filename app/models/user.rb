@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
          has_many :favorites, dependent: :destroy
+         belong_to:circle_id
 end
