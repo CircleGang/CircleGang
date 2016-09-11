@@ -1,4 +1,5 @@
 class CirclesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   def new
   end
   def index
@@ -24,7 +25,7 @@ class CirclesController < ApplicationController
     @circle.save
     redirect_to circle_path(@circle.id)
   end
-  end
+  
   # def destroy
   # end
 end
