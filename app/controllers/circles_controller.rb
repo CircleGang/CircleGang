@@ -13,7 +13,7 @@ class CirclesController < ApplicationController
   	redirect_to circle_path(@circle.id)
   end
   def show
-  	@circle = Circle.find(params[:id])
+  	# @circle = Circle.find(params[:id])
   end
   def edit
   	@circle = Circle.find(params[:id])
