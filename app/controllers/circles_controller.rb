@@ -1,8 +1,7 @@
 class CirclesController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   def new
-    if user = User.authenticate(params[:username], params[:password])
-      session[:user_id] = user.id
+
   end
   def index
   	@circles = Circle.all
@@ -11,7 +10,10 @@ class CirclesController < ApplicationController
   	@circle = Circle.new
   	@circle.title = params[:title]
   	@circle.body = params[:body]
-  	@circle.save
+  	    if user = User.authenticate(params[:username], params[:password])
+      session[:user_id] = user.id
+        end
+      @circle.save
   	redirect_to circle_path(@circle.id)
   end
   def show
