@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
    get 'users_prof/new' => 'users_prof#new'
    get 'users_prof/show' => 'users_prof#show'
-   
+  
+
+   root 'circles#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
- 

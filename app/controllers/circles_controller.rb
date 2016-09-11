@@ -1,4 +1,5 @@
 class CirclesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   def new
     if user = User.authenticate(params[:username], params[:password])
       session[:user_id] = user.id
@@ -26,7 +27,7 @@ class CirclesController < ApplicationController
     @circle.save
     redirect_to circle_path(@circle.id)
   end
-  end
+  
   # def destroy
   # end
 
