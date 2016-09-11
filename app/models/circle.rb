@@ -1,5 +1,5 @@
 class Circle < ApplicationRecord
 	has_many:category_id
-	belong_to:user_id
+	belongs_to:user_id
 
 end
