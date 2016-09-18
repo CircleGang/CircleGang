@@ -1,11 +1,19 @@
 <h1>Circles#new</h1>
 <p>Find me in app/views/circles/new.html.erb</p>
 
-<h1>新規投稿</h1>
-<%= form_tag circles_path do %>
-タイトル
-	<input type="text" name="title">
-本文
-	<textarea name="body"></textarea>
-	<input type="submit" value="投稿する">
+<h1>新規作成</h1>
+<%= form_for @circle do |f| %>
+<%= f.label :name,"サークル名" %>
+<%= f.text_field :name %>
+<%= f.label :admin,"代表者名" %>
+<%= f.text_field :admin %>
+<%= f.label :place,"活動場所" %>
+<%= f.text_field :place %>
+<%= f.label :time,"活動日時" %>
+<%= f.text_field :time %>
+<%= f.label :content,"コンテンツ選択" %>
+<%= f.text_field :content %>
+<%= f.label :message,"一言" %>
+<%= f.text_field :message %>
+<%= f.submit "登録する" %>
 <% end %>
