@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :controlers
-  devise_for :users
+  # devise_for :controlers
+  devise_for :users, :controllers => {
+ :registrations => 'users/registrations'
+}
   # resources :users_prof
   
   get 'circles/new'=>'circles#new'
   get 'circles/show'=>'circles#show'
   get '/circles' => 'circles#index'
-  get '/circle/:id' => 'circles#show',as: 'circle'
+  get '/circles/:id' => 'circles#show',as: 'circle'
   get '/circles/:id/edit' => 'circles#edit', as: 'edit_circle'
   patch '/circles/:id' => 'circles#update', as: 'update_circle'
 

@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-         has_many :favorites, dependent: :destroy
-         belongs_to :circle_id
+  has_many :favorites, dependent: :destroy
+  # belongs_to :circle
 end
