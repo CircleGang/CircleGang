@@ -1,0 +1,2 @@
+class UserProfCategory < ApplicationRecord
+end
