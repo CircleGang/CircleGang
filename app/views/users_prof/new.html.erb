@@ -1,0 +1,48 @@
+プロフィール作成
+<%= form_for(@user_prof) do |f| %>
+ 
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_area :name %>
+  </div>
+
+   <div class="field">
+    <%= f.label :univ %>
+    <%= f.text_area :univ %>
+  </div>
+
+   <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.text_area :gender %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :birth %>
+    <%= f.date_field :birth %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+   <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
