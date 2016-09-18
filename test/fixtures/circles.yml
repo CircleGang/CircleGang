@@ -5,11 +5,11 @@ one:
   place: MyString
   content: MyText
   admin_user_id: 1
-  bio: false
+  bio: MyText
 
 two:
   name: MyString
   place: MyString
   content: MyText
   admin_user_id: 1
-  bio: false
+  bio: MyText
