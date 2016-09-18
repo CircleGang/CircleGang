@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911055932) do
+ActiveRecord::Schema.define(version: 20160918055948) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(version: 20160911055932) do
   create_table "circles", force: :cascade do |t|
     t.string   "name"
     t.string   "place"
-    t.text     "content"
     t.integer  "admin_user_id"
-    t.boolean  "bio"
+    t.text     "bio"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "image"
   end
 
   create_table "controlers", force: :cascade do |t|
