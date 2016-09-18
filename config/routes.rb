@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :controlers
-  devise_for :users
+  devise_for :users, :controllers => {
+ :registrations => 'users/registrations',
+ :sessions => 'users/sessions'
+}
+
   # resources :users_prof
   
   get 'circles/new'=>'circles#new'
@@ -19,7 +22,7 @@ Rails.application.routes.draw do
    get 'users_prof/show' => 'users_prof#show'
   
 
-   root 'circles#index'
+   root 'users_prof#show'
 # >>>>>>> 580139294e508010b5fecc2a6c6029c6a2fdb005
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
