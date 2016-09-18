@@ -3,7 +3,7 @@ class UsersProfController < ApplicationController
 	before_action :authenticate_user!
 
     def new
-    	@user_prof = User_prof.new
+    	@user_prof = UserProf.new
     end
 
     def show
