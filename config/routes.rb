@@ -1,16 +1,12 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   devise_for :users, :controllers => {
  :registrations => 'users/registrations',
  :sessions => 'users/sessions'
 }
-
-=======
   # devise_for :controlers
   devise_for :users, :controllers => {
  :registrations => 'users/registrations'
 }
->>>>>>> d535e957a6ed67c3635ed6f6be16ffac266fc7db
   # resources :users_prof
   
   get 'circles/new'=>'circles#new'
