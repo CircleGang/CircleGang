@@ -4,9 +4,7 @@ Rails.application.routes.draw do
  :sessions => 'users/sessions'
 }
   # devise_for :controlers
-  devise_for :users, :controllers => {
- :registrations => 'users/registrations'
-}
+
   # resources :users_prof
   
   get 'circles/new'=>'circles#new'
