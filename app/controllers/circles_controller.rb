@@ -7,17 +7,12 @@ class CirclesController < ApplicationController
   	@circles = Circle.all
   end
   def create
-  	@circle.name = params[:name]
-  	@circle.admin = params[:admin]
-    @circle.place = params[:place] 
-    @circle.time = params[:time]
-    @circle.content = params[:content]
-    @circle.message = params[:message] 
-  	@circle.save
-        if user = User.authenticate(params[:username], params[:password])
-      session[:user_id] = admin.id
-        end
+    @circle =  Circle.new(circle_params)
+        # if user = User.authenticate(params[:username], params[:password])
+      session[:user_id] = circles.admin_user_id
+        # end
   	redirect_to circle_path(@circle.id)
+    @circle.save
   end
   def show
   	# @circle = Circle.find(params[:id])
@@ -37,8 +32,13 @@ class CirclesController < ApplicationController
   # end
 
    private
+
     def current_user
       @_current_user ||= User.find_by(id: session[:user_id])
+    end
+
+    def circle_params
+       params.require(:circle).permit(:name, :place, :bio, :admin )
     end
 
 end
