@@ -1,6 +1,16 @@
 <h1>ページを編集する</h1>
-<%= form_tag update_circle_path(@circle.id), method: 'patch' do %>
-  <%= text_field_tag :title, @circle.title %>
-  <%= text_area_tag :body, @circle.body %>
+<%= form_for (@circle) do |f| %>
+  <%= f.label :name,"サークル名" %>
+  <%= f.text_field :name %><br>
+  
+  <%= f.label :place,"活動場所" %>
+  <%= f.text_field :place %><br>
+
+  <%= f.label :bio,"サークル紹介" %>
+  <%= f.text_field :bio %><br>
+
+  <%= f.label :admin,"代表者名" %>
+  <%= f.text_field :admin_user_id %><br>
+
   <%= submit_tag '保存' %>
 <% end %>

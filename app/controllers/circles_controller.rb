@@ -1,5 +1,5 @@
 class CirclesController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :show, :edit]
   def new
     @circle =  Circle.new
   end
@@ -7,38 +7,51 @@ class CirclesController < ApplicationController
   	@circles = Circle.all
   end
   def create
-  	@circle.name = params[:name]
-  	@circle.admin = params[:admin]
-    @circle.place = params[:place] 
-    @circle.time = params[:time]
-    @circle.content = params[:content]
-    @circle.message = params[:message] 
-  	@circle.save
-        if user = User.authenticate(params[:username], params[:password])
-      session[:user_id] = admin.id
-        end
+    @circle =  Circle.new(circle_params)
+        # if user = User.authenticate(params[:username], params[:password])
+      session[:user_id] = @circle.id
+        # end
+        @circle.save
   	redirect_to circle_path(@circle.id)
+    
   end
   def show
-  	# @circle = Circle.find(params[:id])
+  	@circle = Circle.find(params[:id])
   end
   def edit
   	@circle = Circle.find(params[:id])
   end
   def update
-  	@circle = Circle.find(params[:id])
-    @circle.title = params[:title]
-    @circle.body = params[:body]
-    @circle.save
+  	@circle.update(circle_params)
+# =======
+#   	@circle = Circle.find(params[:id])
+#     @circle.title = params[:title]
+#     @circle.body = params[:body]
+#     @circle.save
+# >>>>>>> dev
     redirect_to circle_path(@circle.id)
+      #   respond_to do |format|
+      # if @circle.update(circle_params)
+      #   format.html { redirect_to @circle, notice: '記事を変更しました。' }
+      #   format.json { render :show, status: :ok, location: @circle }
+      # else
+      #   format.html { render :edit }
+      #   format.json { render json: @circle.errors, status: :unprocessable_entity }
+      # end
+    # end
   end
   
   # def destroy
   # end
 
    private
+
     def current_user
       @_current_user ||= User.find_by(id: session[:user_id])
+    end
+
+    def circle_params
+       params.require(:circle).permit(:name, :place, :bio, :admin_user_id )
     end
 
 end

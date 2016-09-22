@@ -6,17 +6,18 @@ Rails.application.routes.draw do
   # devise_for :controlers
 
   # resources :users_prof
+  resources :circles
   
-  get 'circles/new'=>'circles#new'
-  get 'circles/show'=>'circles#show'
-  get '/circles' => 'circles#index'
-  get '/circles/:id' => 'circles#show',as: 'circle'
-  get '/circles/:id/edit' => 'circles#edit', as: 'edit_circle'
-  patch '/circles/:id' => 'circles#update', as: 'update_circle'
 
-# <<<<<<< HEAD
+  # get 'circles/new'=>'circles#new'
+  # get 'circles/show'=>'circles#show'
+  # get '/circles' => 'circles#index'
+  # get '/circle/;id' => 'circles#show',as: 'circle'
+  # get '/circles/:id/edit' => 'circles#edit', as: 'edit_circle'
+  # patch '/circles/:id' => 'circles#update', as: 'update_circle'
+
   # post '/circles' => 'circles#create'
-# =======
+
    # '/circles' => 'circles#create'
 
    get 'users_prof/new' => 'users_prof#new'
@@ -24,6 +25,5 @@ Rails.application.routes.draw do
   
 
    root 'users_prof#show'
-# >>>>>>> 580139294e508010b5fecc2a6c6029c6a2fdb005
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
