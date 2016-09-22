@@ -8,7 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>           <header class="navbar">
+
+  <body>       
+      <header class="navbar">
   <div class="container">
     <div id="logo">インカレマッチング</div>
     <ul class="header-right">
@@ -17,7 +19,9 @@
 
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     
-         <% if user_signed_in? %> 
+
+         <% if signed_in? %> 
+
           Logged 
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
 

@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-	belong_to:circle_id
+	# belong_to:circle_id
 end

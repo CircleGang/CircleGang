@@ -23,6 +23,12 @@ class CirclesController < ApplicationController
   end
   def update
   	@circle.update(circle_params)
+# =======
+#   	@circle = Circle.find(params[:id])
+#     @circle.title = params[:title]
+#     @circle.body = params[:body]
+#     @circle.save
+# >>>>>>> dev
     redirect_to circle_path(@circle.id)
       #   respond_to do |format|
       # if @circle.update(circle_params)
