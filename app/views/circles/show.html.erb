@@ -1,5 +1,13 @@
-<h2>タイトル</h2>
-<p><%= circle.name %></p>
-<h2>本文</h2>
-<p><%= circle.bio %></p>
+<h2>サークル名</h2>
+<p><%= @circle.name %></p>
+
+<h2>主な活動場所</h2>
+<p><%= @circle.place %></p>
+
+<h2>紹介文</h2>
+<p><%= @circle.bio %></p>
+
+<h2>代表者</h2>
+<p><%= @circle.admin_user_id %></p>
+
 <%= link_to "編集", edit_circle_path(@circle.id), class: "btn edit-btn" %>

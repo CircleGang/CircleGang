@@ -3,6 +3,6 @@
  -->
  <h1>サークル情報</h1>
  <% @circles.each do |circle| %>
- 	<p>タイトル</p>
- 	<span><%=link_to circle.title, "/circles/#{circle.id}" %></span>
+ 	<p>サークル名</p>
+ 	<span><%=link_to circle.name, "/circles/#{circle.id}" %></span>
  <% end %>
