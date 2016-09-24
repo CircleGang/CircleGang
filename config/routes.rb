@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 }
   # devise_for :controlers
 
-  # resources :users_prof
+  resources :users_prof
   resources :circles
   
-
+  post 'users_prof/create' => 'users_prof#create', :as => :user_profs
   # get 'circles/new'=>'circles#new'
   # get 'circles/show'=>'circles#show'
   # get '/circles' => 'circles#index'
@@ -20,10 +20,10 @@ Rails.application.routes.draw do
 
    # '/circles' => 'circles#create'
 
-   get 'users_prof/new' => 'users_prof#new'
-   get 'users_prof/show' => 'users_prof#show'
+   # get 'users_prof/new' => 'users_prof#new'
+   # get 'users_prof/' => 'users_prof#show'
   
 
-   root 'users_prof#show'
+   root 'users_prof#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
