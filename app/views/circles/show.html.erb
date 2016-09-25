@@ -10,4 +10,10 @@
 <h2>代表者</h2>
 <p><%= @circle.admin_user_id %></p>
 
+<h2>カテゴリー</h2>
+	<% @circle.categories.each do |category| %>
+			<p><%= category.name %></p>
+	<% end %>
+		
+
 <%= link_to "編集", edit_circle_path(@circle.id), class: "btn edit-btn" %>

@@ -1,6 +1,3 @@
 class Circle < ApplicationRecord
-	has_many :category
-	# belongs_to :user
-
-
+	has_many :circle_categories
 end
