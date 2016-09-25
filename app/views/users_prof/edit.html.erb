@@ -1,5 +1,5 @@
 <h1>プロフィール編集</h1>
-<%= form_for (users_profs_path) do |f| %>
+<%= form_for "/users_prof/#{@user_prof.id}" do |f| %>
 
 <%= f.label :name,"氏名" %>
 <%= f.text_field :name %><br>

@@ -27,12 +27,14 @@ class UsersProfController < ApplicationController
 
 
 	def edit
-	    # @user_prof = UserProf.find(params[:id])	
+	    @user_prof = UserProf.find(params[:id])	
+
 	end
 	
 	def update
 		@user_prof = UserProf.new(user_prof_params)
 		@user_prof.save
+		redirect_to "/users_prof/#{@user_prof.id}"
 	end
 	
 	def destroy
