@@ -1,5 +1,5 @@
 class CirclesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :show, :edit]
+  # before_action :authenticate_user!, only: [:new, :show, :edit]
   def new
     @circle =  Circle.new
   end

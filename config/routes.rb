@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :circles
   
   post 'users_prof/create' => 'users_prof#create', :as => :user_profs
+  root 'users_prof#create'
+
   # patch "users_prof/#{@user_prof.id}/update" => 'users_prof#update', :as => :users_profs
   # get 'circles/new'=>'circles#new'
   # get 'circles/show'=>'circles#show'
