@@ -1,5 +1,28 @@
 マイページ
 
+<h2>名前</h2>:
+<p><%= @user_prof.name %></p><br>
+
+<h2>大学名</h2>:
+<p><%= @user_prof.univ %></p><br>
+
+<h2>年齢</h2>:
+<p><%= @user_prof.age %></p><br>
+
+<h2>性別</h2>:
+<p><%= @user_prof.gender %></p><br>
+
+<h2>紹介文</h2>:
+<p><%= @user_prof.bio %></p><br>
+
+<h2>誕生日</h2>:
+<p><%= @user_prof.birth %></p><br>
+
+<h2>代表者</h2>:
+<p><%= @circle.admin_user_id %></p>
+
+
+
 <%= link_to "編集", "/users_prof/#{@user_prof.id}/edit", class: "btn edit-btn" %>
 
 <!--       t.string :name
