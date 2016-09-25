@@ -27,8 +27,7 @@ class UsersProfController < ApplicationController
 
 
 	def edit
-	    @user_prof = UserProf.find(params[:id])	
-
+	    @user_prof = UserProf.find(params[:id])		    	
 	end
 	
 	def update
