@@ -25,6 +25,6 @@ Rails.application.routes.draw do
    # get 'users_prof/' => 'users_prof#show'
   
 
-   root 'users_prof#create'
+   # root 'users_prof#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

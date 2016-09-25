@@ -1,7 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
-
+# after_action :redirect_prof, only: :create 
   # GET /resource/sign_up
  #def new
   #   super
@@ -38,6 +38,12 @@ before_action :configure_sign_up_params, only: [:create]
   # def cancel
   #   super
   # end
+
+  private
+  def redirect_prof
+    # @user_prof = UserProf.new
+    redirect_to new_users_prof_path and return
+  end
 
   protected
 

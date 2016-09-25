@@ -1,5 +1,6 @@
 <h1>新規作成</h1>
-<%= form_for '/users_prof' do |f| %>
+<h2>必ず入力してください</h2>
+<%= form_for(@user_prof) do |f| %>
 
 <%= f.label :name,"氏名" %>
 <%= f.text_field :name %><br>
@@ -19,7 +20,7 @@
 <%= f.text_field :birth %><br>
 
 <%= f.label :image,"プロフィール画像" %>
-<%= f.text_field :image %><br>
+<%= f.file_field :image %><br>
 
 <%= f.label :category,"カテゴリー選択" %>
  <!-- f.text_field :category  --><br>
