@@ -37,6 +37,5 @@ class UsersProfController < ApplicationController
 
 	def user_prof_params
 		params.require(:user_prof).permit(:name, :univ, :age, :gender, :bio, :birth, :user_id)
-		
 	end
 end

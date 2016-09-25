@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918055948) do
+ActiveRecord::Schema.define(version: 20160918075404) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "circle_categories", force: :cascade do |t|
+    t.integer  "circle_id"
+    t.integer  "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -43,6 +50,13 @@ ActiveRecord::Schema.define(version: 20160918055948) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_controlers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_controlers_on_reset_password_token", unique: true
+  end
+
+  create_table "user_prof_categories", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "user_prof_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "user_profs", force: :cascade do |t|
