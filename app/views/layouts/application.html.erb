@@ -13,16 +13,14 @@
       <header class="navbar">
   <div class="container">
     <div id="logo">インカレマッチング</div>
-    <ul class="header-right">
-      <li><%= link_to "Top", root_path %></li>
-      <li><%= link_to "", users_prof_new_path %></li>
 
-      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    
+    <ul class="header-right">
+
+      <li><%= link_to "Top", root_path %></li>
+     
 
          <% if signed_in? %> 
 
-          Logged 
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
 
         <% else %>
@@ -34,5 +32,11 @@
         </header>
       
     <%= yield %>
+
+     <ul class="footer-right">
+      <% if signed_in? %> 
+        <li>Logged <%= current_user.email %></li>
+      <% end %>
+     </ul>
   </body>
 </html>
