@@ -1,13 +1,27 @@
-<h2>サークル名</h2>
-<p><%= @circle.name %></p>
+<%- model_class = Circle -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<h2>主な活動場所</h2>
-<p><%= @circle.place %></p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @circle.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:place) %>:</strong></dt>
+  <dd><%= @circle.place %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:admin_user_id) %>:</strong></dt>
+  <dd><%= @circle.admin_user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bio) %>:</strong></dt>
+  <dd><%= @circle.bio %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
+  <dd><%= @circle.image %></dd>
+</dl>
 
-<h2>紹介文</h2>
-<p><%= @circle.bio %></p>
-
-<h2>代表者</h2>
-<p><%= @circle.admin_user_id %></p>
-
-<%= link_to "編集", edit_circle_path(@circle.id), class: "btn edit-btn" %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              circles_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_circle_path(@circle), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              circle_path(@circle),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

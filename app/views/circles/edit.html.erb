@@ -1,27 +1,5 @@
-<h1>プロフィール編集</h1>
-<%= form_for (@user_prof) do |f| %>
-
-<%= f.label :name,"氏名" %>
-<%= f.text_field :name %><br>
-
-
-<%= f.label :univ,"大学名" %>
-<%= f.text_field :univ %><br>
-
-<%= f.label :gender,"性別" %>
-<%= f.text_field :gender %><br>
-
-<%= f.label :bio,"自己紹介" %>
-<%= f.text_field :bio %><br>
-
-
-<%= f.label :birth,"誕生日" %>
-<%= f.text_field :birth %><br>
-
-<%= f.label :image,"プロフィール画像" %>
-<%= f.text_field :image %>
-
-<%= f.label :category,"カテゴリー選択" %>
- <!-- f.text_field :category  --><br>
-<%= f.submit "登録する" %>
-<% end %>
+<%- model_class = Circle -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>

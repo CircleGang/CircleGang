@@ -1,24 +1,5 @@
-
-
-<h1>新規作成</h1>
-<%= form_for (@circle) do |f| %>
-<%= f.label :name,"サークル名" %>
-<%= f.text_field :name %><br>
-
-
-<%= f.label :place,"活動場所" %>
-<%= f.text_field :place %><br>
-
-<%= f.label :bio,"サークル紹介" %>
-<%= f.text_field :bio %><br>
-
-<%= f.label :image,"サークル画像" %>
-<%= f.text_field :image %>
-
-<%= f.label :admin,"代表者名" %>
-<%= f.text_field :admin_user_id %><br>
-
-<%= f.label :category,"カテゴリー選択" %>
- <!-- f.text_field :category  --><br>
-<%= f.submit "登録する" %>
-<% end %>
+<%- model_class = Circle -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>
