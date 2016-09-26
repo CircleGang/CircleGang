@@ -28,12 +28,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # gem 'foundation-rails'
 # gem 'foundation-icons-sass-rails'
 gem 'simple_form'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 =======
+=======
+>>>>>>> parent of c259666... foundation
 =======
 >>>>>>> parent of c259666... foundation
 gem 'foundation-rails'
