@@ -4,77 +4,31 @@
     <title>CircleGang</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", media: "all" %>
-  　<%= javascript_include_tag "application" %>
-
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
+    
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
 
-  <body>
 
+  <body>     
 
-<button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
-
-<div class="title-bar">
-  <div class="title-bar-left">
-    <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
-    <span class="title-bar-title">Foundation</span>
-  </div>
-  <div class="title-bar-right">
-    <button class="menu-icon"　class="dropdown menu" type="button" data-open="offCanvasRight" ><div class="off-canvas-wrapper">
-    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-      <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
-
-        <!-- Close button -->
-        <button class="close-button" aria-label="Close menu" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-
-        <!-- Menu -->
-        <ul class="dropdown menu">
-          <li><a href="#">Foundation</a></li>
-          <li><a href="#">Dot</a></li>
-          <li><a href="#">ZURB</a></li>
-          <li><a href="#">Com</a></li>
-          <li><a href="#">Slash</a></li>
-          <li><a href="#">Sites</a></li>
-        </ul>
-
-      </div>
-
-      <div class="off-canvas-content" data-off-canvas-content>
-        <!-- Page content -->
-      </div>
-    </div>
-  </div></button>
-  </div>
-</div>
-<ul class="dropdown menu" data-dropdown-menu>
-  <li>
-    <a href="#">Item 1</a>
-    <ul class="menu">
-      <li><a href="#">Item 1A</a></li>
-      <!-- ... -->
-    </ul>
-  </li>
-  <li><a href="#">Item 2</a></li>
-  <li><a href="#">Item 3</a></li>
-  <li><a href="#">Item 4</a></li>
-</ul>
-
-<!-- 
 <div class="contain-to-grid">
   <nav class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
         <h1><a href="#">インカレマッチング</a></h1>
-      </li> -->
+      </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-     <!--  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
  
-    <section class="top-bar-section"> -->
+    <section class="top-bar-section">
       <!-- Right Nav Section -->
-   <!--    <ul class="right">
+      <ul class="right">
         <li class="active"><a href="#">Right Button Active</a></li>
         <li class="has-dropdown">
           <a href="#">Right Button Dropdown</a>
@@ -92,15 +46,15 @@
           </ul>
         </li>
       </ul>
-  -->
+ 
       <!-- Left Nav Section -->
-     <!--  <ul class="left">
+      <ul class="left">
         <li><a href="#">Left Nav Button</a></li>
       </ul>
     </section>
   </nav>
 </div>
- -->
+
 
      
     <%= yield %>
@@ -110,6 +64,7 @@
         <li>Logged <%= current_user.email %></li>
       <% end %>
      </ul>
+<<<<<<< HEAD
 
 
             <% if signed_in? %> 
@@ -122,5 +77,7 @@
           <li><%= link_to "ログイン", new_user_session_path %></li>
         <% end %>
 
+=======
+>>>>>>> parent of c259666... foundation
   </body>
 </html>

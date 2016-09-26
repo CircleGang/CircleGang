@@ -26,11 +26,18 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+<<<<<<< HEAD
 # gem 'foundation-rails'
 # gem 'foundation-icons-sass-rails'
 gem 'simple_form'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+=======
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
+gem 'simple_form'
+
+>>>>>>> parent of c259666... foundation
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'

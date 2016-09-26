@@ -12,17 +12,13 @@
  *
  *= require_tree .
  *= require_self
-
+ *= require foundation_and_overrides
 
  */
  /* 共通レイアウト ================================ */
 body {
   padding-top: 60px;
   color: #364a4d;
-}
-
-.sticky {
-  width: 100%;
 }
 
 ul, li {
