@@ -8,3 +8,5 @@
  	<p>サークル名</p>
  	<span><%=link_to circle.name, "/circles/#{circle.id}" %></span>
  <% end %>
+
+ <%= paginate @circles %>

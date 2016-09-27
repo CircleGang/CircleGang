@@ -4,7 +4,10 @@ class CirclesController < ApplicationController
     @circle =  Circle.new
   end
   def index
+
   	@circles = Circle.all
+
+    @circles = Circle.page(params[:page]).per(10)
   end
   def create
     @circle =  Circle.new(circle_params)
