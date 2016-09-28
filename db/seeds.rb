@@ -9,3 +9,10 @@ Category.create!(
 	name: soccer
 	)
 
+# ----------------------------
+100.times do |i|
+	Circle.create!(
+		name: "サークル名#{i}"
+		address: "住所#{i}"
+	 )
+end
