@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Category.create!(
-	name: soccer
-	)
+# Category.create!(
+# 	name: soccer
+# 	)
 
 # ----------------------------
-100.times do |i|
+20.times do |i|
 	Circle.create!(
-		name: "サークル名#{i}"
-		address: "住所#{i}"
+		name: "test",
+		place: "test"
 	 )
 end
