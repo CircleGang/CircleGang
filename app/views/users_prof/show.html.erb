@@ -18,9 +18,8 @@
 <h2>誕生日</h2>:
 <p><%= @user_prof.birth %></p><br>
 
-<h2>代表者</h2>:
-<p><%= @circle.admin_user_id %></p>
 
+<%= link_to "サークル新規作成", new_circle_path %>
 
 
 <%= link_to "編集", "/users_prof/#{@user_prof.id}/edit", class: "btn edit-btn" %>
