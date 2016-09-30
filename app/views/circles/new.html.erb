@@ -18,7 +18,12 @@
 <%= f.label :admin,"代表者名" %>
 <%= f.text_field :admin_user_id %><br>
 
-<%= f.label :category,"カテゴリー選択" %>
- <!-- f.text_field :category  --><br>
+<!--<%= f.label :category,"カテゴリー選択" %>-->
+<br>
+
+<%= fields_for @category.circle_category do |category| %>
+	<%= category.label_tag :name  %>
+<% end %>
+
 <%= f.submit "登録する" %>
 <% end %>
