@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>CircleGang</title>
-    <link rel="stylesheet" type="text/css" href="app/assets/atyleaheers/application.css">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,67 +14,26 @@
   </head>
 
 
-  
+  <body>     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <body>   
-
-
-
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
         <h1><a href="#">インカレマッチング</a></h1>
-
+      </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+ 
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
       <ul class="right">
-      <li><%= link_to "サークル一覧", circles_path %></li>
-      
-      <li><%#= link_to "",  %></li>
+        <li class="active"><a href="#">Right Button Active</a></li>
+        <li class="has-dropdown">
+          <a href="#">Right Button Dropdown</a>
+          <ul class="dropdown">
+            <li><a href="#">First link in dropdown</a></li>
             <% if signed_in? %> 
 
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
@@ -89,6 +47,13 @@
         </li>
       </ul>
  
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="#">Left Nav Button</a></li>
+      </ul>
+    </section>
+  </nav>
+</div>
 
 
      
@@ -96,24 +61,8 @@
 
      <ul class="footer-right">
       <% if signed_in? %> 
-<<<<<<< HEAD
         <li>Logged <%#= current_user.email %></li>
-=======
-        <li>Logged </li>
->>>>>>> 34073d3875e7fda0a85809c3e12dbaddca4db541
       <% end %>
      </ul>
-
-            <% if signed_in? %> 
-
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-
-        <% else %>
-          <li><%= link_to "新規登録", new_user_registration_path %> </li>
-
-          <li><%= link_to "ログイン", new_user_session_path %></li>
-        <% end %>
-
-
   </body>
 </html>
