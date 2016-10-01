@@ -4,6 +4,38 @@ class ApplicationController < ActionController::Base
  #  def after_sign_in_path_for(resource)
 	# "/users_prof/#{@user_prof.id}"
  #  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def current_user
     	@current_user = current_user
     end
