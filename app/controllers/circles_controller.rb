@@ -1,15 +1,12 @@
 class CirclesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :show, :edit]
+  before_action :authenticate_user!
   def new
     @circle =  Circle.new
-    @user_prof = UserProf.find(params[:id])
   end
   def index
   	@circles = Circle.all
-    @user_prof = UserProf.find(params[:id])
   end
   def create
-    @user_prof = UserProf.find(params[:id])
     @circle =  Circle.new(circle_params)
         # if user = User.authenticate(params[:username], params[:password])
        @circle.id = session[:user_id]
@@ -20,14 +17,11 @@ class CirclesController < ApplicationController
   end
   def show
   	@circle = Circle.find(params[:id])
-    @user_prof = UserProf.find(params[:id])
   end
   def edit
   	@circle = Circle.find(params[:id])
-    @user_prof = UserProf.find(params[:id])
   end
   def update
-    @user_prof = UserProf.find(params[:id])
   	@circle.update(circle_params)
 # =======
 #   	@circle = Circle.find(params[:id])
