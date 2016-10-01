@@ -1,3 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 マイページ
 
 <h2>名前</h2>
@@ -18,17 +48,8 @@
 <h2>誕生日</h2>
 <p><%= @user_prof.birth %></p><br>
 
-
-
+<%= link_to "サークル新規作成", new_circle_path %>
 
 
 <%= link_to "編集", "/users_prof/#{@user_prof.id}/edit", class: "btn edit-btn" %>
 
-<!--       t.string :name
-      t.string :univ
-      t.integer :age
-      t.integer :gender
-      t.text :bio
-      t.date :birth
-      t.string :image
-      t.integer :user_id -->

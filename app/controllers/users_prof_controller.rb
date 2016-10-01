@@ -14,7 +14,7 @@ class UsersProfController < ApplicationController
 		# @user_prof.gender = 1
 		# @user_prof.bio = "紹介文を入力してください。"
 		# @user_prof.birth = 2011, 12, 24
-		@user_prof.id = current_user.id
+		@user_prof.user_id = current_user.id
 		@user_prof.save
 		redirect_to "/users_prof/#{@user_prof.id}"
 	end
@@ -47,9 +47,7 @@ class UsersProfController < ApplicationController
 		@user_prof = UserProf.find(params[:id])
 	end
 
-	  # def current_user
-   #     User.find_by(id: session[:id])
-   #    end
+	
 
 	def user_prof_params
 		params.require(:user_prof).permit(:name, :univ, :age, :gender, :bio, :birth )
