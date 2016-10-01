@@ -7,6 +7,9 @@ class CirclesController < ApplicationController
 
   	@circles = Circle.all
 
+    @q = Circle.search(params[:q])
+    @circles = @q.result(distinct: true)
+
     @circles = Circle.page(params[:page]).per(10)
   end
   def create
