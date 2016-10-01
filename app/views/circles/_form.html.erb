@@ -10,6 +10,27 @@
   <%= f.input :image %>
   <%#= error_span(@circle[:image]) %>
 
+<%= f.label :category,"カテゴリー選択" %>
+<br>
+
+<%= fields_for @circle.categories do || %>
+  <%= check_box_tag :category %>
+  <%= label_tag :category, 'tech' %>
+  <%= check_box_tag :bissness %>
+  <%= label_tag :bisiness, 'biss' %>
+  <%= check_box_tag :sports %>
+  <%= label_tag :sports, 'sports' %>
+  <%= check_box_tag :a %>
+  <%= label_tag :a, 'a' %>
+  <%= check_box_tag :b %>
+  <%= label_tag :b, 'b' %>
+  <%= check_box_tag :c %>
+  <%= label_tag :c, 'c' %>
+<% end %>
+<br>
+
+
+
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 circles_path, :class => 'btn btn-default' %>

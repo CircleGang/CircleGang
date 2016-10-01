@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   # belongs_to :circle
-         # belongs_to :user_prof
+        # belongs_to :user_prof
 end

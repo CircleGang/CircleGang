@@ -1,5 +1,7 @@
 <!-- <h1>Circles#index</h1>
 <p>Find me in app/views/circles/index.html.erb</p>
+
+
  -->
  <div class="circle1">
  <h1>サークル情報</h1>
@@ -52,26 +54,26 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:image) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:place) %></th>
       <th><%= model_class.human_attribute_name(:admin_user_id) %></th>
       <th><%= model_class.human_attribute_name(:bio) %></th>
-      <th><%= model_class.human_attribute_name(:image) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%#= model_class.human_attribute_name(:image) %></th>
+      <th><%#= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @circles.each do |circle| %>
       <tr>
-        <td><%= link_to circle.id, circle_path(circle) %></td>
-        <td><%= circle.name %></td>
+        <td><%=circle.image%></td>
+        <td><%=link_to circle.name, "/circles/#{circle.id}" %></td>
         <td><%= circle.place %></td>
         <td><%= circle.admin_user_id %></td>
         <td><%= circle.bio %></td>
-        <td><%= circle.image %></td>
-        <td><%=l circle.created_at %></td>
+        <td><%#= circle.image %></td>
+        <td><%#=l circle.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_circle_path(circle), :class => 'btn btn-default btn-xs' %>
@@ -89,4 +91,4 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_circle_path,
             :class => 'btn btn-primary' %>
-<%= link_to "マイページ", "/users_prof/#{@current_user.id}" %>
+<%#= link_to "マイページ", "/users_prof/#{@current_user.id}" %>

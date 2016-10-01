@@ -14,6 +14,7 @@ class UsersProfController < ApplicationController
 		# @user_prof.gender = 1
 		# @user_prof.bio = "紹介文を入力してください。"
 		# @user_prof.birth = 2011, 12, 24
+		#@user_prof.user_id = @user.id
 		@user_prof.user_id = current_user.id
 		@user_prof.save
 		redirect_to "/users_prof/#{@user_prof.id}"

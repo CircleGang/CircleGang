@@ -6,26 +6,6 @@
 
 
 
-<%= f.label :category,"カテゴリー選択" %>
-<br>
-
-<%= fields_for @circle.categories do ||%>
-	<%= check_box_tag :category %>
-	<%= label_tag :category, 'tech' %>
-	<%= check_box_tag :bissness %>
-	<%= label_tag :bisiness, 'biss' %>
-	<%= check_box_tag :sports %>
-	<%= label_tag :sports, 'sports' %>
-	<%= check_box_tag :a %>
-	<%= label_tag :a, 'a' %>
-	<%= check_box_tag :b %>
-	<%= label_tag :b, 'b' %>
-	<%= check_box_tag :c %>
-	<%= label_tag :c, 'c' %>
-<% end %>
-<br>
-<%= f.submit "登録する" %>
-<% end %>
 
 
 
@@ -36,4 +16,4 @@
 <%= render :partial => 'form' %>
 
 
-<#= link_to "マイページ", "/users_prof/#{current_user.id}" %>
+<%#= link_to "マイページ", "/users_prof/#{current_user.id}" %>

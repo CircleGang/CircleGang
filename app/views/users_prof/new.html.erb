@@ -22,6 +22,8 @@
 <%= f.label :image,"プロフィール画像" %>
 <%= f.file_field :image %><br>
 
+<%#= f.collection_select :user_id, User.all, :id, :id%>
+
 <%= f.label :category,"カテゴリー選択" %>
  <!-- f.text_field :category  --><br>
 <%= f.submit "登録する" %>

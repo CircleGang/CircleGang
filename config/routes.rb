@@ -24,7 +24,7 @@ Rails.application.routes.draw do
    # '/circles' => 'circles#create'
 
    # get 'users_prof/new' => 'users_prof#new'
-   # get 'users_prof/' => 'users_prof#show'
+   # get 'users_prof/:id' => 'users_prof#show'
   
 
   root 'home#top'
