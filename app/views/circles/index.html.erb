@@ -3,6 +3,20 @@
 
 
  -->
+
+ <%= search_form_for @q do |f| %>
+
+  <%= f.label :name_or_bio_cont, "サークル名か紹介文" %>
+  <%= f.search_field :name_or_bio_cont %>
+
+
+  <%# 検索ボタン %>
+  <%= f.submit %>
+<% end %>
+
+
+
+
  <div class="circle1">
  <h1>サークル情報</h1>
  </div>

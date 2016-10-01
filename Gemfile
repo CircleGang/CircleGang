@@ -35,6 +35,9 @@ gem 'twitter-bootstrap-rails'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 
+
+gem 'ransack'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
