@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   resources :users_prof
   resources :circles
-  
+  #do end 入れ子ルーティング
+
   post 'users_prof/create' => 'users_prof#create', :as => :user_profs
   # patch "users_prof/#{@user_prof.id}/update" => 'users_prof#update', :as => :users_profs
   # get 'circles/new'=>'circles#new'

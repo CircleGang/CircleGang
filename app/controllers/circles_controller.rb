@@ -5,7 +5,7 @@ class CirclesController < ApplicationController
   end
   def index
 
-  	@circles = Circle.all
+  	#@circles = Circle.all
 
     @q = Circle.search(params[:q])
     @circles = @q.result(distinct: true)
