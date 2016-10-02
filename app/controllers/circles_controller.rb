@@ -8,14 +8,14 @@ class CirclesController < ApplicationController
   	#@circles = Circle.all
 
     @q = Circle.search(params[:q])
-    @circles = @q.result(distinct: true)
+    @circles = @q.result(distinct: true).page(params[:page]).per(10)
 
-    @circles = Circle.page(params[:page]).per(10)
   end
+
   def create
     @circle =  Circle.new(circle_params)
         # if user = User.authenticate(params[:username], params[:password])
-       @circle.id = session[:user_id]
+       @circle.admin_user_id = session[:user_id]
         # end
         @circle.save
   	redirect_to circle_path(@circle.id)

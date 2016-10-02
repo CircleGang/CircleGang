@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   get 'home/top'
 
   devise_for :users, :controllers => {
- :registrations => 'users/registrations',
+ :registrations => :registrations,
  :sessions => 'users/sessions'
 }
+
   # devise_for :controlers
 
   resources :users_prof
