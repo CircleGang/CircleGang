@@ -28,6 +28,7 @@ class CirclesController < ApplicationController
   	@circle = Circle.find(params[:id])
   end
   def update
+    @circle = Circle.find(params[:id])
   	@circle.update(circle_params)
 # =======
 #   	@circle = Circle.find(params[:id])

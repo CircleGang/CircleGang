@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20160918075404) do
 
   create_table "circle_categories", force: :cascade do |t|
     t.integer  "circle_id"
-    t.integer  "category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "circles", force: :cascade do |t|
